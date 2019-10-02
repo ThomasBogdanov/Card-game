@@ -1,17 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Home Page</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Card Games</title>
+  <link rel="stylesheet" href="styles/styles.css" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/afff26de13.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.mint.css"> -->
+</head>
+<body>
 
-    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
-    <script type="text/javascript" src="/scripts/app.js"></script>
-  </head>
+    <!-- ------------------Nav Bar --------------- -->
+  <section id="nav-bar">
 
-  <body>
-    <h1>Hello World!</h1>
-  </body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#"><img src="/images/LogoMakr_2z32b9.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <ul class="navbar-nav ml-auto">
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="#banner">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#games">Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#aboutUs">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#socialMedia">Contact Us</a>
+            </li>
+
+          
+        </ul>
+      </div>
+    </nav>
+
+
+  </section>
+
+  <!-------------Banner section----------->
+  <section id="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="websiteTitle">T.K.S. CARD GAMES!</p>
+                <p>Play all of your favourite card games with your friends and family! We have the most popular games such as Dos, Pokemans and Yu-Gee-Oh! </p>
+                
+                
+                <% if (user === undefined) { %>
+                
+                <button class="login" data-toggle="modal" data-target="#modalLoginForm">Login</button>
+        
+
+
+                <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header text-center">
+                      <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <form method="POST" action="/users/login">
+                    <div class="modal-body mx-3">
+                        <div class="md-form">
+                          <i class="fas fa-envelope prefix grey-text"></i>
+                          <input type="text" name="username" class="form-control validate">
+                          <label class="yourEmailText w-100 font-weight-bold" name="username" type="text" for="username">Your Username</label>
+                        </div>
+              
+                        <div class="md-form mb-4">
+                          <i class="fas fa-lock prefix grey-text"></i>
+                          <input type="password" name="password" id="defaultForm-pass" class="form-control validate">
+                          <label class="yourEmailText w-100 font-weight-bold" name="password" type="text" for="password">Your password</label>
+                        </div>
+              
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                      <button class="allGamesButton" type="submit">Login</button>
+                    </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+
+
+                              
+              <button class="register" data-toggle="modal" data-target="#modalRegistrationForm">SignUp</button>
+        
+
+
+              <div class="modal fade" id="modalRegistrationForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Registration</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <form method="POST" action="/users/register">
+                  <div class="modal-body mx-3">
+                    <div class="md-form">
+                      <i class="fas fa-envelope prefix grey-text"></i>
+                      <input type="text" name="username" class="form-control validate">
+                      <label class="yourEmailText w-100 font-weight-bold" name="username" type="text" for="username">Your Username</label>
+                    </div>
+            
+                    <div class="md-form mb-4">
+                      <i class="fas fa-lock prefix grey-text"></i>
+                      <input type="password" name="password" id="defaultForm-pass" class="form-control validate">
+                      <label class="yourEmailText w-100 font-weight-bold" name="password" type="text" for="password">Your password</label>
+                    </div>
+            
+                  </div>
+                  <div class="modal-footer d-flex justify-content-center">
+                    <button class="allGamesButton" type="submit">Sign up!</button>
+                  </div>
+                </form>
+                </div>
+              </div>
+            </div>
+
+
+            <% } else { %>
+
+
+              <form method="POST" action="/users/logout">
+                <button type="submit" class="login">Logout</button> 
+              </form>
+            <% } %>
+
+            
+
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="/images/—Pngtree—virtual reality, character, board game,_4377825.png" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <img src="/images/wave-top.png" class="topWave">
+
+  </section>
+
+<!-- ---------------------- Game Section ----------------------- -->
+  <section id="games">
+    <div class="container text-center">
+        <h1 class="title">Select your Game!</h1>
+        <div class="row text-center">
+            <div class="col-md-4 games">
+                <a href="/games/uno">
+                <img src="/images/1200px-UNO_Logo.svg.png" class="unoIMG">
+                
+                <p class="unoP">Crazy Eights with a twist! Be the first to get rid of all the cards in your hand to win! Mess with your friends by making them draw more cards!</p>
+                </a>
+            </div>
+            <div class="col-md-4 games">
+                <img src="/images/300px-Yu-Gi-Oh!_Duelist_logo.png" class="yugiohIMG">
+
+                <p class="yugiohP">Drop your opponents life points to zero to be victorious. Build up your high level monsters and active those trap and magic cards!</p>
+            </div>
+            <div class="col-md-4 games">
+                <img src="/images/US_Pokemon_Logo.png" class="pokemonIMG">
+
+                <p class="pokemonP">Battle it out with your powerful Pokemon at your side! Gain the upper hand with Pokemon types! Gotta catch em' all and be a champion!</p>
+            </div>
+        </div>
+        <button class="allGamesButton">All Games</button>
+    </div>
+  </section>
+
+<!-- -------------------- About Us Section ------------------------- -->
+
+  <section id="aboutUs">
+    <div class="container">
+        <h1 class="title text-center">About Us!</h1>
+        <div class="row">
+            <div class="col-md-6 aboutUs">
+                <p class="aboutUsTitle">Why we're different</p>
+                <ul>
+                    <li> Our games are all up-to-date with the newest and greatest features! </li>
+                    <li> We're constantly upgrading the website to better fit our endlessly expanding userbase! </li>
+                    <li> Our design is simple, interactive and easy to follow! </li>
+                    <li> No downtime! *(while we're at LHL) </li>
+                    <li> An amazing support system that deals with all of your concerns. Just find us on the floor at LHL! </li>
+                    <li> Rise to glory and reach the top of our leaderboards! </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <img src="/images/—Pngtree—2 5d data stereo_4838368.png" class="aboutUsIMG">
+            </div>
+        </div>
+    </div>
+  </section>
+
+<!-- ---------------Testimonials ----------------- -->
+
+  <section id="testimonials">
+        <div class="container">
+            <h1 class="title text-center">Testimonials</h1>
+            <div class="row offset-1">
+                <div class="col-md-5 testimonials">
+                    <p>Yo, can you finish your card game so our users have something to play while they're waiting for their ranking?</p>
+                    <img src="/images/Andrew.png">
+                    <p class="andrewDetails"><b>Andrew</b><br> Future Web Designer</p>
+                </div>
+                <div class="col-md-5 testimonials">
+                    <p>Can I stop doing front end stuff now and get something to eat?</p><br> 
+                    <img src="/images/Thomas3.png">
+                    <p class="andrewDetails"><b>Thomas</b><br> Future Web Designer</p>
+                </div>
+            </div>
+        </div>
+  </section>
+
+  <!-- ----------------Social Media Section --------------- -->
+
+  <section id="socialMedia">
+    <div class="container text-center">
+        <p>Follow us on social media to get our latest updates!</p>
+        <div class="socialMediaIcons">
+            <a href="#"><img src="/images/fb-icon.png"></a>
+            <a href="#"><img src="/images/linked-icon.png"></a>
+            <a href="#"><img src="/images/twitter-icon.png"></a>
+            <a href="#"><img src="/images/whats-icon.png"></a>
+            <a href="#"><img src="/images/insta-icon.png"></a>
+            <a href="#"><img src="/images/snap-icon.png"></a>
+        </div>
+    </div>
+  </section>
+
+  <!-- --------------Footer Section -------------------- -->
+
+  <section id="footer">
+    <img src="/images/wave-bottom.png" class="footerImg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 footerText">
+                <img src="/images/LogoMakr_2z32b9.png">
+                <p>Play all of your favourite card games with your friends and family! We have the most popular games such as Dos, Pokemans and Yu-Gee-Oh!</p>
+            </div>
+            <div class="col-md-4 footerText">
+                <p class="contactUsText" style="margin-top: 25px;"><b>Contact Us</b></p>
+                <p><i class="fa fa-map-pin"></i>Lighthouse Labs, Vancouver, BC</p>
+                <p><i class="fa fa-mobile"></i>(604)123-4567</p>
+                <p><i class="fa fa-envelope"></i>TKSCardGames@Gmail.com</p>
+            </div>
+            <div class="col-md-4 footerText">
+                <p style="margin-top: 25px;"><b>Subscribe to our Newsletter!</b></p>
+                <input type="email" class="form-control" placeholder="Your E-Mail!">
+                <button class="subscribe">Subscribe</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/scripts/smooth-scroll.js"></script>
+    <script>
+            var scroll = new SmoothScroll('a[href*="#"]');
+        </script>
+
+  </section>
+
+
+
+</body>
+<!-- <a href='https://pngtree.com/so/virtual reality'>virtual reality png from pngtree.com</a> -->
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- used some youtube tutorials for ideas -->

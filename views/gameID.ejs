@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Play Page</title>
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+    <link rel="stylesheet" href="/styles/styles.css" type="text/css">
+    <script type="text/javascript" src="/scripts/check_cards.js"></script>
+    <script type="text/javascript" src="/scripts/draggable.js"></script>
+  </head>
+
+  <body>
+    <!-- --------------nav bar----------------- -->
+      <section id="nav-bar">
+
+
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="/"><img src="/images/LogoMakr_2z32b9.png"></a>
+  
+  
+            <form method="POST" style="position:absolute; right:0;" action="/users/logout">
+              <button type="submit" class="logoutUno">Logout</button> 
+            </form>
+      
+          </nav>
+      
+      
+        </section>
+
+
+<!-- --------------game board-------------- -->
+
+
+
+        <section id="theGameBoard">
+            <div class="theUnoGameBoard">
+              <div class="opponentsHand">
+                  <% for (const card of playerHand) { %>
+                    <div class="card-container">
+                    <img src="<%=card.image_url%>"/>
+                    </div>
+                    <% } %>
+              
+
+  
+              </div>
+
+
+                <div class="row text-center wrapper" style="margin-left: auto; margin-right: auto;">
+
+
+                  <div class="col-md-4 theDeckImage">
+                    <form id="draw" method="POST" action="/games/uno/<%=gameID%>">
+                      <input id="hidden-input" name="hidden-input" type="hidden" value="<%-gameID%>">
+                        <button class="submitButtonDraw" type="submit">
+                          <img src="/images/card-back.png"/>
+                        </button>
+                    </form>
+                  </div>
+
+                  
+  
+                  <div class="col-md-4 current-card">
+                      <img class="middleCard" src="/images/7-blue.png" data-value="7" data-colour="blue"/>
+                  </div>
+
+                  
+            
+                <div class="col-md-4 theDeckImage">
+                  <form id="draw" method="POST" action="/games/uno/<%=gameID%>">
+                    <input id="hidden-input" name="hidden-input" type="hidden" value="<%-gameID%>">
+                      <button class="submitButtonDraw" type="submit">
+                        <img src="/images/card-back.png"/>
+                      </button>
+                  </form>
+                </div>
+
+              </div>
+                  
+
+            </div>
+  
+
+
+  
+              <div class="myHand">
+                
+                  <% for(let card of playerHand) { %>
+                    <div class="card-container">
+                        <img class="testDiv" data-game="<%=gameID%>"data-value="<%=card.value%>" data-colour="<%=card.colour%>" src="<%=card.image_url%>" />
+                    </div>
+                  <% } %>
+                  
+              </div>
+            </div>
+        
+  
+          </section>
+  
+  
+        <!-- ----------------title bar------------- -->
+
+        <div class="row text-center" class="unoTitlePage" style="margin-top:25px;">
+            
+        
+          
+          <form action="/games/uno" method="GET" style="margin: auto; margin-bottom: 40px;">
+            <button type="submit" class="startUnoGame">Back to Rooms</button>
+          </form>
+
+
+        </div>
+
+        <!-- -------------- game board ---------------- -->
+
+
+        <!-- ------------------Footer --------------------- -->
+
+        <section id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 footerText">
+                        <img src="/images/LogoMakr_2z32b9.png">
+                        <p>Play all of your favourite card games with your friends and family! We have the most popular games such as Dos, Pokemans and Yu-Gee-Oh!</p>
+                    </div>
+                    <div class="col-md-4 footerText">
+                        <p class="contactUsText" style="margin-top: 25px;"><b>Contact Us</b></p>
+                        <p><i class="fa fa-map-pin"></i>Lighthouse Labs, Vancouver, BC</p>
+                        <p><i class="fa fa-mobile"></i>(604)123-4567</p>
+                        <p><i class="fa fa-envelope"></i>TKSCardGames@Gmail.com</p>
+                    </div>
+                    <div class="col-md-4 footerText">
+                        <p style="margin-top: 25px;"><b>Subscribe to our Newsletter!</b></p>
+                        <input type="email" class="form-control" placeholder="Your E-Mail!">
+                        <button class="subscribe">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+    
+          </section>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

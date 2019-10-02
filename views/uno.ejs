@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Card Games</title>
+  <link rel="stylesheet" href="../styles/styles.css" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/afff26de13.js" crossorigin="anonymous"></script>
+
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.mint.css"> -->
+</head>
+<body>
+
+
+    <!-- ------------------Nav Bar --------------- -->
+    <section id="nav-bar">
+
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="/"><img src="/images/LogoMakr_2z32b9.png"></a>
+
+
+          <form method="POST" style="position:absolute; right:0;" action="/users/logout">
+            <button type="submit" class="logoutUno">Logout</button> 
+          </form>
+    
+        </nav>
+    
+    
+      </section>
+
+
+      <!-- -------------------Game rooms--------------- -->
+
+    <section id="gameTables">
+      <div class="row text-center" class="unoTitlePage" style="margin-top:25px;">
+          <div class="col-md-4">
+        <img src="/images/1200px-UNO_Logo.svg.png" class="unoIMG">
+        </div>
+        <div class="col-md-4">
+        <h1 class="title text-center">The UNO Page!</h1>
+        </div>
+        <div class="col-md-4">
+        <img src="/images/1200px-UNO_Logo.svg.png" class="unoIMG">
+        </div>
+      </div>
+
+    <form id="new-game" method="POST" action="/games/uno/new">
+      <button name="startGame" value="startGame" class="startUnoGame">Start a game!</button>
+    </form>
+
+    <section id="allGamesTables">
+        
+        <div class="row text-center">
+            <div class="col-md-4 contentLeft">
+                <p class="bottomLineTitle">Game ID</p>
+                <% for(let game of games) { %>
+                <p class="bottomLineText"><%= game.id %></p>
+                <% } %>
+            </div>
+            <div class="col-md-4 contentMiddle">
+                <p class="bottomLineTitle">Creator</p>  
+                <% for(let game of games) { %>
+                <p class="bottomLineText"><%= game.username %></p>
+                <% } %>
+            </div>
+            <div class="col-md-4 contentRight">
+                <p class="bottomLineTitle">Join Room!</p>
+                <% for(let game of games) { %>
+                <form class="joinForm" method="POST" action="/games/uno/<%= game.id %>"><button class="joinGameButton" type="submit" >JOIN</button></form>
+                <% } %>
+
+            </div>
+        </div>
+        
+  </section>
+
+</section>
+
+
+    <!-- --------------Footer Section -------------------- -->
+
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footerText">
+                    <img src="/images/LogoMakr_2z32b9.png">
+                    <p>Play all of your favourite card games with your friends and family! We have the most popular games such as Dos, Pokemans and Yu-Gee-Oh!</p>
+                </div>
+                <div class="col-md-4 footerText">
+                    <p class="contactUsText" style="margin-top: 25px;"><b>Contact Us</b></p>
+                    <p><i class="fa fa-map-pin"></i>Lighthouse Labs, Vancouver, BC</p>
+                    <p><i class="fa fa-mobile"></i>(604)123-4567</p>
+                    <p><i class="fa fa-envelope"></i>TKSCardGames@Gmail.com</p>
+                </div>
+                <div class="col-md-4 footerText">
+                    <p style="margin-top: 25px;"><b>Subscribe to our Newsletter!</b></p>
+                    <input type="email" class="form-control" placeholder="Your E-Mail!">
+                    <button class="subscribe">Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+      </section>
+
+      
+  </body>
+
+
+</html>

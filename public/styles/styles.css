@@ -1,0 +1,628 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+#nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-brand img {
+    height: 70px;
+    padding-left: 20px;
+    color: #fff !important;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #a517ba,#5f1782);
+}
+
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+.navbar-nav li a {
+    color: #fff !important;
+    font-weight: 600;
+    float: right;
+    text-align: left;
+}
+
+.navbar-toggler-icon {
+    color: #fff !important;
+    font-size: 30px !important;
+}
+
+
+/* --------Banner Section------- */
+
+#banner {
+    background-image: linear-gradient(to right, #a517ba,#5f1782);
+    color: #fff;
+    /* padding-top: 5%; */
+}
+
+.websiteTitle {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100px;
+}
+
+.login {
+    margin: 20px;
+    width: 100px;
+    height: 50px;
+    border: 3px solid white;
+    background-color: rgba(255,255,255,0);
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+
+    transition: background-color 1000ms, color 1000ms;
+}
+
+.register {
+    margin: 20px;
+    margin-right: 20px;
+    width: 100px;
+    height: 50px;
+    border: 3px solid white;
+    background-color: rgba(255,255,255,0);
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+
+    transition: background-color 1000ms, color 1000ms;
+}
+
+.login:hover {
+    background-color: rgba(255,255,255,1);
+    color: #222;
+
+    transition: background-color 1000ms, color 1000ms;
+
+}
+
+.register:hover {
+    background-color: rgba(255,255,255,1);
+    color: #222;
+
+    transition: background-color 1000ms, color 1000ms;
+
+}
+
+.topWave {
+    height: 350px;
+    width: 100%;
+
+}
+
+/* ------------Games Section ----------- */
+
+#games {
+    margin-bottom: 120px;
+}
+
+.unoIMG {
+    width: 150px;
+    margin-top: 20px;
+}
+
+.yugiohIMG {
+
+    width: 220px;
+    margin-top: 35px;
+}
+
+.pokemonIMG {
+    width: 240px;
+    margin-top: 20px;
+}
+
+.games {
+    padding: 20px;
+}
+
+.games:hover {
+    border-style: groove;
+    border-radius: 5px;
+    border-color: #7b1798;
+}
+
+.unoP {
+    padding-top: 30px;
+    font-family: sans-serif;
+    color: black;
+}
+
+.yugiohP {
+    padding-top: 34px;
+    font-family: sans-serif;
+}
+
+.pokemonP {
+    padding-top: 47px;
+    font-family: sans-serif;
+}
+
+.title {
+    font-size: 40px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.title::before {
+    content: '';
+    background: #7b1798;
+    height: 5px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform: translateY(63px);
+}
+
+.title::after {
+    content: '';
+    background: #7b1798;
+    height: 10px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    display: block;
+    transform: translateY(8px);
+}
+
+.allGamesButton {
+    margin: 20px;
+    margin-right: 20px;
+    width: 100px;
+    height: 50px;
+    border: 3px solid #7b1697;
+    background-color: rgba(255,255,255,0);
+    color: black;
+    font-family: sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+
+    transition: background-color 1000ms, color 1000ms;
+}
+
+.allGamesButton:hover {
+    background-color: #7b1798;
+    color: white;
+
+    transition: background-color 1000ms, color 1000ms;
+
+}
+
+
+/* ---------------About Us Section-------------- */
+
+#aboutUs {
+    background: #f8f9fa;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.aboutUsTitle {
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-top: 8%;
+}
+
+.aboutUsIMG {
+    width: 60%;
+    float: right;
+    margin-right: 80px;
+}
+
+.aboutUs ul li {
+    margin: 10px 0;
+}
+
+.aboutUs ul {
+    margin: 20px;
+}
+
+
+/* -------------Testimonials------------------ */
+
+#testimonials {
+    margin: 100px 0;
+}
+
+.testimonials {
+    border-left: 4px solid #7b1798;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.testimonials img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.andrewDetails {
+    display: inline-block;
+    font-size: 12px;
+}
+
+/* -------------Social Media------------------ */
+
+#socialMedia {
+    padding: 100px 0;
+}
+
+#socialMedia p {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.socialMediaIcons img{
+    width: 60px;
+    transition: 0.5s;
+}
+
+.socialMediaIcons a:hover img {
+    transform: translateY(-10px);
+}
+
+/* ---------------Footer--------------- */
+
+#footer {
+    background-image: linear-gradient(to right, #a517ba,#5f1782);
+    color: #fff;
+}
+
+.footerImg {
+    height: 230px;
+    width: 100%;
+}
+
+.footerText {
+    padding: 20px;
+}
+
+.footerText img {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.contactUsText p {
+    margin-top: 25px;
+}
+
+.footerText .fa{
+    margin-right: 8px;
+    size: 100px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 2px;
+    background-image: linear-gradient(to right, #a517ba,#5f1782);
+}
+
+.subscribe {
+    margin-top: 40px;
+    margin: 20px;
+    width: 100px;
+    height: 50px;
+    border: 3px solid white;
+    background-color: rgba(255,255,255,0);
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    
+    transition: background-color 1000ms, color 1000ms;
+}
+
+.subscribe:hover {
+    background-color: rgba(255,255,255,1);
+    color: #222;
+
+    transition: background-color 1000ms, color 1000ms;
+
+}
+
+/* -------------Login Styling--------------- */
+
+.modal-header {
+    background-image: linear-gradient(to right, #a517ba,#5f1782);
+}
+
+.close span {
+    color: #fff;
+}
+
+.yourEmailText {
+    color: black;
+    font-family: sans-serif;
+}
+
+.md-form {
+    margin-bottom: 15px;
+}
+
+.modal-body {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+
+.logoutUno {
+    margin: 20px;
+    width: 100px;
+    height: 50px;
+    border: 3px solid white;
+    background-color: rgba(255,255,255,0);
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+
+    
+
+    transition: background-color 1000ms, color 1000ms;
+}
+
+.logoutUno:hover {
+    background-color: rgba(255,255,255,1);
+    color: #222;
+
+    transition: background-color 1000ms, color 1000ms;
+
+}
+
+#allGamesTables {
+    margin-top: 25px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-style: solid;
+    border: 10px solid #7b1697;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-radius: 50px;
+    background: #f8f9fa;
+}
+
+
+.startUnoGame {
+    margin: 20px;
+    margin-right: 20px;
+    width: 150px;
+    height: 100px;
+    border: 3px solid #7b1697;
+    background-color: rgba(255,255,255,0);
+    color: black;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+
+    transition: background-color 1000ms, color 1000ms;
+}
+
+.startUnoGame:hover {
+    background-color: #7b1798;
+    color: white;
+
+    transition: background-color 1000ms, color 1000ms;
+
+}
+
+.games-table {
+    margin: auto;
+    margin-top: 25px;
+    border-style: solid;
+    border: 10px solid #7b1697;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.joinForm {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #7b1798;
+    padding-bottom: 20px
+    
+}
+
+.contentLeft {
+    border-right: 3px solid #7b1798;
+    
+
+  }
+
+.contentRight {
+    border-left: 3px solid #7b1798;
+
+}
+
+/* .contentMiddle {
+
+} */
+
+.bottomLine {
+    border-bottom: 1px solid #7b1798;
+    padding-bottom: 20px
+}
+
+.bottomLineText {
+    border-bottom: 1px solid #7b1798;
+    padding-bottom: 20px;
+    font-family: sans-serif;
+    font-weight: 300px;
+    font-size: 17px;
+}
+
+.joinGameButton {
+    width: 100px;
+    height: 25px;
+    border: 3px solid #7b1697;
+    background-color: rgba(255,255,255,0);
+    color: black;
+    font-family: sans-serif;
+    font-weight: 600;
+    border-radius: 5px;
+    display: block;
+    margin: auto;   
+}
+
+.joinGameButton:hover {
+    background-color: #7b1798;
+    color: white;
+
+    transition: background-color 1000ms, color 1000ms;
+
+}
+
+.bottomLineTitle {
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: sans-serif;
+    border-bottom: 3px solid #7b1798;
+    padding-bottom: 20px;
+
+}
+
+.unoTitlePage {
+    margin: auto;
+    margin-top: 25px;
+}
+
+/* ------------game board--------------- */
+
+#theGameBoard {
+    margin-top: 25px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-style: solid;
+    border: 10px solid #7b1697;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-radius: 50px;
+    background: #f8f9fa;
+    background-image: linear-gradient(to right, #a517ba,#5f1782);
+}
+
+#theGameBoard img {
+    width: 75px;
+}
+
+.opponentsHand {
+    margin-top: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-style: solid;
+    border: 10px solid #7b1697;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-radius: 50px;
+    background: #f8f9fa;
+    display: flex;
+    width: 100%;
+}
+
+.myHand {
+    margin-top: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-style: solid;
+    border: 10px solid #7b1697;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-radius: 50px;
+    background: #f8f9fa;
+    display: flex;
+    width: 100%;
+    flex: 1 0 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    /* z-index: 9999; */
+}
+
+.testDiv {
+    flex: 1 0 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+
+.submitButtonDraw {
+    border-color: rgba(255,255,255,0);
+    background: #f8f9fa;
+
+}
+
+.card-container {
+    flex: 1 0 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    transition: 0.5s;
+    /* z-index: 9999; */
+} 
+
+
+.card-container:last-child {
+    flex: 0 0 auto;
+}
+
+.card-container:hover {
+    overflow: visible;
+    transform: translateY(-10px);
+    /* z-index: 9999; */
+    position: relative;
+} 
+
+.theDeckImage {
+    /* padding-left: 100px;
+    padding-right: 100px; */
+    border-style: solid;
+    border: 10px solid #7b1697;
+
+    border-radius: 50px;
+    background: #f8f9fa;
+    display: inline;
+}
+
+.current-card {
+    padding-left: 100px;
+    padding-right: 100px;
+    border-style: solid;
+    border: 10px solid #7b1697;
+
+    border-radius: 50px;
+    background: #f8f9fa;
+    display: inline;
+}
+
+
+.wrapper {
+    /* width: 60%; */
+    /* margin-left: auto;
+    margin-right: auto; */
+}

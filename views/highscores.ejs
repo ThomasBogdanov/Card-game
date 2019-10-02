@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HighScores Page</title>
+
+  </head>
+
+  <body>
+    <table class="scores-table">
+      <thead>
+          <tr>
+              <th scope="col">Wins</th>
+              <th scope="col">Player</th>
+          </tr>
+      </thead>
+      <tbody>
+      <% for(let game of games) { %>
+          <tr>
+            <td><%= game.id %></td>
+            <td><%= game.username %></td>
+          </tr>
+      <% } %>
+      </tbody>
+  </table>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+.other-cards{
+  border:1px solid black;
+  display:flex;
+  width:100%;
+  height:33%;
+}
+
+.deck-table{
+  border:1px solid black;
+  display:flex;
+  height:34%;
+}
+.deck{
+margin-left:300px;
+}
+.opponent-hand{
+  display:flex;
+  width: 14%;
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 3px 3px 12px 2px rgba(0,0,0,0.6);
+  transition: 0.2s;
+}
+.opponent-hand:not(:first-child) {
+  margin-left: -2rem;
+}
+.opponent-hand:not(:last-child):hover, .card:not(:last-child):focus-within {
+  transform: translateY(-1rem);
+}
+.opponent-hand:not(:last-child):hover ~ .card, .card:not(:last-child):focus-within ~ .card {
+  transform: translateX(2rem);
+}
+
+
+
+.cards{
+  border:1px solid black;
+  display:flex;
+}
+.uno-card{
+  display:flex;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 12px 2px rgba(0,0,0, 0.6);
+  transition: 0.2s;
+  width: 14%;
+}
+.uno-card:not(:first-child) {
+  margin-left: -2rem;
+}
+.uno-card:not(:last-child):hover, .card:not(:last-child):focus-within {
+  transform: translateY(-1rem);
+}
+.uno-card:not(:last-child):hover ~ .card, .card:not(:last-child):focus-within ~ .card {
+  transform: translateX(2rem);
+}

@@ -1,0 +1,27 @@
+
+
+<header class="headerConstant">
+          <div class="navbar-brand">
+            <h1>Card Games</h1>
+          </div> -->
+
+                <p>Logged in as:</p>
+                <a class="nav item nav-link" href="users/login">Login</a>
+                <a class="nav item nav-link" href="users/register">Register</a>
+                <a class="nav item nav-link" href="users/logout">Logout(Only display when logged in)</a>
+                <form class="form-inline" method="POST" action="/users/logout">
+                  <button type="submit" class="btn btn-primary">Logout</button> 
+                </form>
+            </div>
+        
+          </div>
+          <div class="globalUserOptions" id="globalUserOptions">
+              <a href="users/myProfile">My Profile</a>
+              <a href="users/highScores">HighScores</a>
+              <a href="users/userLookup">UserLookup</a>
+          </div>
+
+</header>
+       
+
+       <% include ./partials/_header %>
