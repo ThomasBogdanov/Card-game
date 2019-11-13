@@ -1,5 +1,27 @@
-LHL Node Skeleton
+Uno!
 =========
+
+## About the Webpage
+
+This is a full stack web app project built in 2 weeks by a group of 3. It was made with HTML, Bootstrap, JS, jQuery and postgreSQL. The webpage supports all viewports. Registration, Login, Logout, game creation and game play are all functional.
+
+## Website Demo 
+
+- The Uno Home Page:
+!["Home Page!"](https://github.com/siningtong/Card-game/blob/master/public/gifs/HomePage.gif?raw=true)
+- Mobile Support and Dynamic scrolling:
+!["Scrolling!"](https://github.com/siningtong/Card-game/blob/master/public/gifs/MobileSupport.gif?raw=true)
+- Login/Signup Demo:
+!["Login/Signup!"](https://github.com/siningtong/Card-game/blob/master/public/gifs/LoginSignup.gif?raw=true)
+- The Game room
+!["Uno!"](https://github.com/siningtong/Card-game/blob/master/public/gifs/GameRoom.gif?raw=true)
+
+## Known Bugs
+
+- Can currently signup without details entered
+- Your hand and opponent's hand is currently the same and both displayed (Need websockets)
+- Drawing a card replaces all the cards you've played back into your hand (Not updating properly)
+- No win condition at the moment that declares victory
 
 ## Project Setup
 
